@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="get_sensor_values">Get sensor values</string>
+    <string name="calculate">Calculate</string>
+    <string name="temperature">Temperature:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="air_pressure">Air pressure:</string>
+    <string name="predicted_amount_of_rain">Predicted amount of rain:</string>
+    <string name="wind_speed">Wind speed:</string>
+    <string name="mm">mm</string>
+    <string name="_0_0">0.0</string>
+    <string name="_0_00">0.00</string>
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/getValuesBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="19dp"
+        android:text="Get sensor values"
+        app:layout_constraintBottom_toTopOf="@+id/calculateBttn"
+        app:layout_constraintEnd_toEndOf="@+id/windValue"
+        app:layout_constraintTop_toBottomOf="@+id/windValue" />
+
+    <Button
+        android:id="@+id/calculateBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="37dp"
+        android:background="@color/colorPrimary"
+        android:text="Calculate"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/predtext"
+        app:layout_constraintStart_toStartOf="@+id/getValuesBttn"
+        app:layout_constraintTop_toBottomOf="@+id/getValuesBttn" />
+
+    <TextView
+        android:id="@+id/temptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="97dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Temperature:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/windtext"
+        app:layout_constraintEnd_toStartOf="@+id/tempValue"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/humitext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Humidity:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/presstext"
+        app:layout_constraintEnd_toStartOf="@+id/humiValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temptext" />
+
+    <TextView
+        android:id="@+id/presstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Air pressure:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/windtext"
+        app:layout_constraintEnd_toStartOf="@+id/pressValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humitext" />
+
+    <TextView
+        android:id="@+id/windtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="380dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Wind speed:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/windValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temptext" />
+
+    <TextView
+        android:id="@+id/predtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:text="Predicted amount of rain:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/predValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateBttn" />
+
+    <TextView
+        android:id="@+id/mmtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginTop="16dp"
+        android:text="mm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/predValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/predValue"
+        app:layout_constraintTop_toTopOf="@+id/predValue" />
+
+    <TextView
+        android:id="@+id/predValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="156dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/menuitem_background"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.0"
+        android:textAlignment="textStart"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mmtext"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predtext" />
+
+    <TextView
+        android:id="@+id/windValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/menuitem_background"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/getValuesBttn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/windtext"
+        app:layout_constraintTop_toBottomOf="@+id/pressValue" />
+
+    <TextView
+        android:id="@+id/pressValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/menuitem_background"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/windValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/presstext"
+        app:layout_constraintTop_toBottomOf="@+id/humiValue" />
+
+    <TextView
+        android:id="@+id/humiValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/menuitem_background"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/pressValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humitext"
+        app:layout_constraintTop_toBottomOf="@+id/tempValue" />
+
+    <TextView
+        android:id="@+id/tempValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/menuitem_background"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/humiValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/temptext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
